@@ -1,0 +1,6 @@
+<div class="task-input-container">
+	<input #tareaInput type="text" placeholder="Escribe una tarea" (keyup.enter)="agregarTarea(tareaInput)">
+	<button type="button" (click)="agregarTarea(tareaInput)">Agregar</button>
+</div>
+
+<p class="error" *ngIf="mensajeError">{{ mensajeError }}</p>

@@ -1,0 +1,8 @@
+<p *ngIf="tareas.length === 0">No hay tareas registradas</p>
+
+<ul *ngIf="tareas.length > 0">
+	<li *ngFor="let tarea of tareas; let i = index" [class.completada]="tarea.completada">
+		<span class="tarea-nombre" (click)="completar(i)">Tarea {{ i + 1 }}: {{ tarea.texto }}</span>
+		<button type="button" class="eliminar" (click)="eliminar(i)">Eliminar</button>
+	</li>
+</ul>
